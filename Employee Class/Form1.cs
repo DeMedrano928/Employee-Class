@@ -7,42 +7,6 @@ namespace Employee_Class
             InitializeComponent();
         }
 
-        class Employee
-        {
-            // Class' Properties
-            public string _name;
-            public int _idNumber;
-            public string _department;
-            public string _position;
-
-            // Constructor 
-            public Employee(string name, int idNumber, string department, string position)
-            {
-                _name = name;
-                _idNumber = idNumber;
-                _department = department;
-                _position = position;
-            }
-
-            // Constructor that takes only the Name and ID Number
-            public Employee(string name, int idNumber)
-            {
-                _name = name;
-                _idNumber = idNumber;
-                _department = "";
-                _position = "";
-            }
-
-            // No parameters constructor
-            public Employee()
-            {
-                _name = "";
-                _idNumber = 0;
-                _department = "";
-                _position = "";
-            }
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             // Creates a list of employees with different properties.
@@ -61,10 +25,10 @@ namespace Employee_Class
 
                 // Displays all object properties in the text label.
                 resultsLabel.Text += $"Object {i + 1}:" +
-                    $"\n       Name: {currentEmployee._name}" +
-                    $"\n       ID: {currentEmployee._idNumber}" +
-                    $"\n       Dept: {currentEmployee._department}" +
-                    $"\n       Position: {currentEmployee._position}\n";
+                    $"\n       Name: {currentEmployee.Name}" +
+                    $"\n       ID: {currentEmployee.IdNumber}" +
+                    $"\n       Dept: {currentEmployee.Department}" +
+                    $"\n       Position: {currentEmployee.Position}\n";
 
             }
         }
